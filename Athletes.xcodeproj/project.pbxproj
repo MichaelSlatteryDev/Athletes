@@ -14,6 +14,10 @@
 		76A48656253B92CC006EA526 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76A48654253B92CC006EA526 /* LaunchScreen.storyboard */; };
 		76A48661253B92CC006EA526 /* AthletesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A48660253B92CC006EA526 /* AthletesTests.swift */; };
 		76A4866C253B92CC006EA526 /* AthletesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A4866B253B92CC006EA526 /* AthletesUITests.swift */; };
+		76A48688253B95F4006EA526 /* Athletes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A48687253B95F4006EA526 /* Athletes.swift */; };
+		76A48690253B9680006EA526 /* Squads.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A4868F253B9680006EA526 /* Squads.swift */; };
+		76A48695253B9B97006EA526 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A48694253B9B97006EA526 /* Api.swift */; };
+		76A4869A253BA5BC006EA526 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A48699253BA5BC006EA526 /* Session.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +51,10 @@
 		76A48667253B92CC006EA526 /* AthletesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AthletesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		76A4866B253B92CC006EA526 /* AthletesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AthletesUITests.swift; sourceTree = "<group>"; };
 		76A4866D253B92CC006EA526 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		76A48687253B95F4006EA526 /* Athletes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Athletes.swift; sourceTree = "<group>"; };
+		76A4868F253B9680006EA526 /* Squads.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Squads.swift; sourceTree = "<group>"; };
+		76A48694253B9B97006EA526 /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
+		76A48699253BA5BC006EA526 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +105,14 @@
 		76A48648253B92CC006EA526 /* Athletes */ = {
 			isa = PBXGroup;
 			children = (
+				76A48686253B95E7006EA526 /* Responses */,
 				76A48649253B92CC006EA526 /* AppDelegate.swift */,
 				76A4864B253B92CC006EA526 /* SceneDelegate.swift */,
 				76A4864D253B92CC006EA526 /* ViewController.swift */,
 				76A48652253B92CC006EA526 /* Assets.xcassets */,
 				76A48654253B92CC006EA526 /* LaunchScreen.storyboard */,
 				76A48657253B92CC006EA526 /* Info.plist */,
+				76A48694253B9B97006EA526 /* Api.swift */,
 			);
 			path = Athletes;
 			sourceTree = "<group>";
@@ -123,6 +133,16 @@
 				76A4866D253B92CC006EA526 /* Info.plist */,
 			);
 			path = AthletesUITests;
+			sourceTree = "<group>";
+		};
+		76A48686253B95E7006EA526 /* Responses */ = {
+			isa = PBXGroup;
+			children = (
+				76A48687253B95F4006EA526 /* Athletes.swift */,
+				76A4868F253B9680006EA526 /* Squads.swift */,
+				76A48699253BA5BC006EA526 /* Session.swift */,
+			);
+			path = Responses;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,9 +274,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76A4869A253BA5BC006EA526 /* Session.swift in Sources */,
+				76A48695253B9B97006EA526 /* Api.swift in Sources */,
 				76A4864E253B92CC006EA526 /* ViewController.swift in Sources */,
 				76A4864A253B92CC006EA526 /* AppDelegate.swift in Sources */,
 				76A4864C253B92CC006EA526 /* SceneDelegate.swift in Sources */,
+				76A48688253B95F4006EA526 /* Athletes.swift in Sources */,
+				76A48690253B9680006EA526 /* Squads.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

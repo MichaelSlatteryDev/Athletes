@@ -14,8 +14,16 @@ class ViewController: UIViewController {
         
         view.backgroundColor = .systemPurple
         // Do any additional setup after loading the view.
+        
+        Api.shared.login(username: "sampleUsername", password: "samplePassword") { username in
+            print(username)
+        }
+        Api.shared.getAthletes() { athletes in
+            print(athletes)
+        }
+        Api.shared.getSquads() { squads in
+            print(squads)
+        }
     }
-
-
 }
 
