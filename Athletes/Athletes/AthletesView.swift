@@ -11,15 +11,6 @@ class AthletesView: UIView {
     
     static let cellReuseIdentifier = "AthleteCell"
     
-    let athletesCollectionView: UICollectionView = {
-        let layout = UICollectionViewFlowLayout()
-        layout.scrollDirection = .vertical
-        let c = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        c.translatesAutoresizingMaskIntoConstraints = false
-        c.register(AthleteCell.self, forCellWithReuseIdentifier: cellReuseIdentifier)
-        return c
-    }()
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -37,4 +28,13 @@ class AthletesView: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    let athletesCollectionView: UICollectionView = {
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .vertical
+        let c = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        c.translatesAutoresizingMaskIntoConstraints = false
+        c.register(AthleteCell.self, forCellWithReuseIdentifier: cellReuseIdentifier)
+        return c
+    }()
 }

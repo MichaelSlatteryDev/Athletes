@@ -66,4 +66,13 @@ extension AthletesViewController: UICollectionViewDelegate, UICollectionViewData
         cell.setup(username: athlete.username, imageUrl: athlete.image.url)
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let athletes = athletes else { return }
+        
+        let athlete = athletes[indexPath.row]
+        let athleteDetailsViewController = AtheleteDetailsViewController()
+        athleteDetailsViewController.setup(athlete: athlete)
+        present(athleteDetailsViewController, animated: true)
+    }
 }

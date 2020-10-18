@@ -9,8 +9,6 @@ import UIKit
 
 class LoginView: UIView {
     
-    private let defaultSpacing: CGFloat = 32
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -27,6 +25,9 @@ class LoginView: UIView {
     }
     
     func addConstraints() {
+        
+        let defaultSpacing = Constants.defaultSpacing
+        
         NSLayoutConstraint.activate([
             
             usernameTextField.topAnchor.constraint(equalTo: self.topAnchor, constant: defaultSpacing * 2),
@@ -39,7 +40,7 @@ class LoginView: UIView {
             
             logInButton.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: defaultSpacing),
             logInButton.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: defaultSpacing),
-            self.trailingAnchor.constraint(equalTo: logInButton.trailingAnchor, constant: defaultSpacing),
+            self.trailingAnchor.constraint(equalTo: logInButton.trailingAnchor, constant: defaultSpacing)
         ])
     }
     
@@ -47,7 +48,7 @@ class LoginView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    var usernameTextField: DetailedTextField = {
+    let usernameTextField: DetailedTextField = {
         let t = DetailedTextField()
         t.placeholder = "Username"
         t.layer.borderWidth = 1.0
@@ -57,7 +58,7 @@ class LoginView: UIView {
         return t
     }()
     
-    var passwordTextField: DetailedTextField = {
+    let passwordTextField: DetailedTextField = {
         let t = DetailedTextField()
         t.placeholder = "Password"
         t.layer.borderWidth = 1.0
@@ -66,7 +67,7 @@ class LoginView: UIView {
         return t
     }()
     
-    var logInButton: UIButton = {
+    let logInButton: UIButton = {
         let b = UIButton()
         b.setTitle("Log In", for: .normal)
         b.backgroundColor = .systemBlue

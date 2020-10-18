@@ -25,6 +25,9 @@
 		76A486C2253BBE4C006EA526 /* AthletesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A486C1253BBE4C006EA526 /* AthletesViewController.swift */; };
 		76A486CA253BBF75006EA526 /* AthleteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A486C9253BBF75006EA526 /* AthleteCell.swift */; };
 		76A486E8253BDB49006EA526 /* AthletesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A486E7253BDB49006EA526 /* AthletesView.swift */; };
+		76A486EE253BDDD7006EA526 /* AthleteDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A486ED253BDDD7006EA526 /* AthleteDetailsView.swift */; };
+		76A486F6253BE4B1006EA526 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A486F5253BE4B1006EA526 /* Constants.swift */; };
+		76A486FB253BEB36006EA526 /* AtheleteDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A486FA253BEB36006EA526 /* AtheleteDetailsViewController.swift */; };
 		7A2C15FC54C938A33E7FD28F /* Pods_AthletesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5155090D2CD5F2C0B3E9061C /* Pods_AthletesTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -72,6 +75,9 @@
 		76A486C1253BBE4C006EA526 /* AthletesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AthletesViewController.swift; sourceTree = "<group>"; };
 		76A486C9253BBF75006EA526 /* AthleteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AthleteCell.swift; sourceTree = "<group>"; };
 		76A486E7253BDB49006EA526 /* AthletesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AthletesView.swift; sourceTree = "<group>"; };
+		76A486ED253BDDD7006EA526 /* AthleteDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AthleteDetailsView.swift; sourceTree = "<group>"; };
+		76A486F5253BE4B1006EA526 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		76A486FA253BEB36006EA526 /* AtheleteDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtheleteDetailsViewController.swift; sourceTree = "<group>"; };
 		83981A23C254504951E13F7C /* Pods_Athletes_AthletesUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Athletes_AthletesUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		96E99E69B512C1276BBB53BD /* Pods-Athletes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Athletes.debug.xcconfig"; path = "Target Support Files/Pods-Athletes/Pods-Athletes.debug.xcconfig"; sourceTree = "<group>"; };
 		9B9A6BA60440AE7B4DC823F3 /* Pods-AthletesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AthletesTests.debug.xcconfig"; path = "Target Support Files/Pods-AthletesTests/Pods-AthletesTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -145,6 +151,7 @@
 		76A48648253B92CC006EA526 /* Athletes */ = {
 			isa = PBXGroup;
 			children = (
+				76A486EC253BDDC4006EA526 /* AthleteDetails */,
 				76A486C0253BBE36006EA526 /* Athletes */,
 				76A486B6253BBC39006EA526 /* CustomUIElements */,
 				76A486A5253BA91F006EA526 /* Login */,
@@ -155,6 +162,7 @@
 				76A48654253B92CC006EA526 /* LaunchScreen.storyboard */,
 				76A48657253B92CC006EA526 /* Info.plist */,
 				76A48694253B9B97006EA526 /* Api.swift */,
+				76A486F5253BE4B1006EA526 /* Constants.swift */,
 			);
 			path = Athletes;
 			sourceTree = "<group>";
@@ -212,6 +220,15 @@
 				76A486E7253BDB49006EA526 /* AthletesView.swift */,
 			);
 			path = Athletes;
+			sourceTree = "<group>";
+		};
+		76A486EC253BDDC4006EA526 /* AthleteDetails */ = {
+			isa = PBXGroup;
+			children = (
+				76A486ED253BDDD7006EA526 /* AthleteDetailsView.swift */,
+				76A486FA253BEB36006EA526 /* AtheleteDetailsViewController.swift */,
+			);
+			path = AthleteDetails;
 			sourceTree = "<group>";
 		};
 		9310576484F6152035060075 /* Frameworks */ = {
@@ -462,6 +479,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				76A4869A253BA5BC006EA526 /* Session.swift in Sources */,
+				76A486FB253BEB36006EA526 /* AtheleteDetailsViewController.swift in Sources */,
 				76A48695253B9B97006EA526 /* Api.swift in Sources */,
 				76A486E8253BDB49006EA526 /* AthletesView.swift in Sources */,
 				76A4864E253B92CC006EA526 /* LoginViewController.swift in Sources */,
@@ -471,6 +489,8 @@
 				76A48688253B95F4006EA526 /* Athletes.swift in Sources */,
 				76A486A7253BA92D006EA526 /* LoginView.swift in Sources */,
 				76A486CA253BBF75006EA526 /* AthleteCell.swift in Sources */,
+				76A486EE253BDDD7006EA526 /* AthleteDetailsView.swift in Sources */,
+				76A486F6253BE4B1006EA526 /* Constants.swift in Sources */,
 				76A486C2253BBE4C006EA526 /* AthletesViewController.swift in Sources */,
 				76A48690253B9680006EA526 /* Squads.swift in Sources */,
 			);
