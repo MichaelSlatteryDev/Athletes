@@ -16,10 +16,17 @@ class LoginView: UIView {
         
         backgroundColor = .white
         
+        addSubviews()
+        addConstraints()
+    }
+    
+    func addSubviews() {
         addSubview(usernameTextField)
         addSubview(passwordTextField)
         addSubview(logInButton)
-        
+    }
+    
+    func addConstraints() {
         NSLayoutConstraint.activate([
             
             usernameTextField.topAnchor.constraint(equalTo: self.topAnchor, constant: defaultSpacing * 2),
@@ -40,7 +47,7 @@ class LoginView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    lazy var usernameTextField: DetailedTextField = {
+    var usernameTextField: DetailedTextField = {
         let t = DetailedTextField()
         t.placeholder = "Username"
         t.layer.borderWidth = 1.0
@@ -50,7 +57,7 @@ class LoginView: UIView {
         return t
     }()
     
-    lazy var passwordTextField: DetailedTextField = {
+    var passwordTextField: DetailedTextField = {
         let t = DetailedTextField()
         t.placeholder = "Password"
         t.layer.borderWidth = 1.0
@@ -59,7 +66,7 @@ class LoginView: UIView {
         return t
     }()
     
-    lazy var logInButton: UIButton = {
+    var logInButton: UIButton = {
         let b = UIButton()
         b.setTitle("Log In", for: .normal)
         b.backgroundColor = .systemBlue

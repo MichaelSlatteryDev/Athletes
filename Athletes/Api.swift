@@ -62,6 +62,12 @@ class Api {
         fetch(request: request, completion: completion)
     }
     
+    func getImage(url: URL, completion: @escaping (Data?) -> ()) {
+        var request = URLRequest(url: url)
+        request.httpMethod = "GET"
+        fetch(request: request, completion: completion)
+    }
+    
     private func fetch<T: Codable>(request: URLRequest, completion: @escaping (T?) -> ()) {
         let task = URLSession.shared.dataTask(with: request) { [weak self] data, response, error in
             guard let data = data, error == nil else {

@@ -5,7 +5,7 @@
 //  Created by Michael Slattery on 10/17/20.
 //
 
-import Foundation
+import UIKit
 
 struct Athletes: Codable {
     let athletes: [Athlete]
