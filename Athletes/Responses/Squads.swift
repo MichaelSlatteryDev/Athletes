@@ -14,6 +14,7 @@ struct Squads: Codable {
 struct Squad: Codable {
     let createdAt: String
     let id: Int
+    let name: String
     let organisationId: Int
     let updatedAt: String
 }

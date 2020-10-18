@@ -10,6 +10,7 @@ import SDWebImage
 
 class AthletesViewController: UIViewController {
     
+    var allAthletes: [Athlete]?
     var athletes: [Athlete]?
     
     var athletesView: AthletesView = {
@@ -24,16 +25,42 @@ class AthletesViewController: UIViewController {
         athletesView.athletesCollectionView.delegate = self
         athletesView.athletesCollectionView.dataSource = self
         
+        athletesView.backButton.addTarget(self, action: #selector(backTapped), for: .touchUpInside)
+        athletesView.filterButton.addTarget(self, action: #selector(filterTapped), for: .touchUpInside)
         
         Api.shared.getAthletes() { [weak self] response in
             guard let athletes = response?.athletes else { return }
             
+            self?.allAthletes = athletes
             self?.athletes = athletes
             
             DispatchQueue.main.async {
                 self?.athletesView.athletesCollectionView.reloadData()
             }
         }
+    }
+    
+    @objc func backTapped() {
+        dismiss(animated: true)
+    }
+    
+    @objc func filterTapped() {
+        let filterViewController = FilterViewController()
+        filterViewController.modalPresentationStyle = .overCurrentContext
+        filterViewController.modalTransitionStyle = .crossDissolve
+        filterViewController.delegate = self
+        present(filterViewController, animated: true)
+    }
+}
+
+extension AthletesViewController: FilterDelegate {
+    func filter(squadId: Int?) {
+        if let squadId = squadId {
+            athletes = allAthletes?.filter { $0.squadIds.contains(squadId) }
+        } else {
+            athletes = allAthletes
+        }
+        athletesView.athletesCollectionView.reloadData()
     }
 }
 

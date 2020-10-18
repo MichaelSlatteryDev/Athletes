@@ -35,7 +35,7 @@ class LoginViewController: UIViewController {
     @objc func logIn() {
         guard let username = loginView.usernameTextField.text, let password = loginView.passwordTextField.text else { return }
         
-        Api.shared.login(username: "sampleUsername", password: "samplePassword") { [weak self] username in
+        Api.shared.login(username: username, password: password) { [weak self] username in
             DispatchQueue.main.async {
                 let athletesViewController = AthletesViewController()
                 athletesViewController.modalPresentationStyle = .fullScreen

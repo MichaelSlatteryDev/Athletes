@@ -51,7 +51,7 @@ class LoginView: UIView {
     let usernameTextField: DetailedTextField = {
         let t = DetailedTextField()
         t.placeholder = "Username"
-        t.layer.borderWidth = 1.0
+        t.layer.borderWidth = Constants.borderWidth
         t.autocorrectionType = .no
         t.autocapitalizationType = .none
         t.translatesAutoresizingMaskIntoConstraints = false
@@ -61,7 +61,7 @@ class LoginView: UIView {
     let passwordTextField: DetailedTextField = {
         let t = DetailedTextField()
         t.placeholder = "Password"
-        t.layer.borderWidth = 1.0
+        t.layer.borderWidth = Constants.borderWidth
         t.isSecureTextEntry = true
         t.translatesAutoresizingMaskIntoConstraints = false
         return t
